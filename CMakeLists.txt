@@ -10,6 +10,8 @@ add_subdirectory(mailserve/)
 
 file(GLOB LIBNET_ADDONS LIST_DIRECTORIES true "addons/*")
 
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/out/addons)
+
 foreach(LIBNET_ADDON IN LISTS LIBNET_ADDONS)
     add_subdirectory(${LIBNET_ADDON})
     message("-- [mailserve] Appending addon ${LIBNET_ADDON}")
